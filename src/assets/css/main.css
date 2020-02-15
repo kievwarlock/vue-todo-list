@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "SF-Pro";
+    src: url("../fonts/SF-Pro-Display-Regular.otf") format("woff2");
+}
+@font-face {
+    font-family: "SF-Pro";
+    font-weight: 900;
+    src: url("../fonts/SF-Pro-Display-Heavy.otf") format("woff2");
+}
+@font-face {
+    font-family: "SF-Pro";
+    font-weight: 500;
+    src: url("../fonts/SF-Pro-Display-Medium.otf") format("woff2");
+}
+
+body .application {
+    font-family: "SF-Pro";
+}
