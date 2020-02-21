@@ -8,8 +8,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
@@ -27,7 +27,7 @@ const commonConfig = {
         chunkFilename: 'js/[name].chunk.js'
     },
     resolve: {
-        extensions: [ '.js', '.vue' ],
+        extensions: ['.js', '.vue'],
         alias: {
             '@': path.join(__dirname, 'src'),
         }
@@ -54,6 +54,14 @@ const commonConfig = {
                             sourceMap: isDev
                         }
                     },
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    'sass-loader'
                 ]
             },
             {
