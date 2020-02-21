@@ -1,17 +1,16 @@
 <template>
-
     <v-dialog
             v-model="dialog"
             max-width="290"
             content-class="dialog-logout"
-            :attach="attach" >
+            :attach="attach">
         <div class="dialog-logout__container">
             <div class="dialog-logout__content">
                 <slot></slot>
             </div>
             <div class="dialog-logout__nav">
                 <template v-if="cancelBtn">
-                    <div class="dialog-logout__nav-btn" @click="$emit('close')" >
+                    <div class="dialog-logout__nav-btn" @click="$emit('close')">
                         {{cancelBtn}}
                     </div>
                 </template>
@@ -23,7 +22,6 @@
             </div>
         </div>
     </v-dialog>
-
 </template>
 
 <script>
@@ -62,7 +60,5 @@
     }
 </script>
 
-
 <style>
-
 </style>

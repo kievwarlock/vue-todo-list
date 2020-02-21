@@ -6,10 +6,16 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     strict: true,
-    state: {
-        preloader: false,
-    },
     modules: {
         todo,
     },
+    mutations: {
+        initialiseStore(state) {
+            if (localStorage.getItem('store')) {
+                this.replaceState(
+                    Object.assign(state, JSON.parse(localStorage.getItem('store')))
+                );
+            }
+        }
+    }
 });

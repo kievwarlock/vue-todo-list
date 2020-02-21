@@ -1,19 +1,19 @@
 <template>
-    <div class="container" >
+    <div class="container">
         <slot/>
     </div>
 </template>
 
 <script>
     export default {
-        name:"container",
+        name: "container",
     }
 </script>
 
 <style>
     .container {
-        max-width:800px;
-        width:100%;
+        max-width: 800px;
+        width: 100%;
         margin: 0 auto;
     }
 </style>
